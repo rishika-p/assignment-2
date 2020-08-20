@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPvZJKi1NwEDkL0b+cmiP9p",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/rishika-p/assignment-2/blob/master/a-2(10)\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "FlTuUkKuW-8I",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qC0fT5ldeHon",
+        "colab_type": "text"
+      },
+      "source": [
+        "Write  a  program  that  reads  a  date  from  the  user  and  computes  its immediate successor. The date is the format YYYY-MM-DD. So, 2020-04-15 will have the successor 2020-04-16."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "x0k1bdAveH_U",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 84
+        },
+        "outputId": "086a4678-3e5f-4465-dfdb-3d34c3d6acb1"
+      },
+      "source": [
+        "d=int(input(\"Enter the day : \"))\n",
+        "m=int(input(\"Enter the month : \"))\n",
+        "y=int(input(\"Enter the year : \"))\n",
+        "if ((y%4==0)and(y%100!=0))or(y%400==0):\n",
+        "  if m==2:\n",
+        "    d1=29\n",
+        "  elif m==1 or m==3 or m==5 or m==7 or m==8 or m==10 or m==12:\n",
+        "    d1=31\n",
+        "  else :\n",
+        "    d1=30\n",
+        "else:\n",
+        "  if m==2:\n",
+        "    d1=28\n",
+        "  elif m==1 or m==3 or m==5 or m==7 or m==8 or m==10 or m==12:\n",
+        "    d1=31\n",
+        "  else :\n",
+        "    d1=30\n",
+        "if d==31 and m==12 :\n",
+        "  d=1\n",
+        "  m=1\n",
+        "  y=y+1\n",
+        "elif d1-d==0 :\n",
+        "  m=m+1\n",
+        "  d=1\n",
+        "else:\n",
+        "  d=d+1\n",
+        "print(\"NEXT DAY IS : \",y,\"-\",m,\"-\",d)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the day : 15\n",
+            "Enter the month : 4\n",
+            "Enter the year : 2020\n",
+            "NEXT DAY IS :  2020 - 4 - 16\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
